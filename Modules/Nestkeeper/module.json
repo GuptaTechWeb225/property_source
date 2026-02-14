@@ -1,0 +1,13 @@
+{
+    "name": "Nestkeeper",
+    "alias": "nestkeeper",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Nestkeeper\\Providers\\NestkeeperServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

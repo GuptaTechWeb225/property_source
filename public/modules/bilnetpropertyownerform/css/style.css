@@ -1,0 +1,812 @@
+:root {
+    --primary-color: #087c7c;
+    --bg-color-1: #0d1117;
+    --bg-color-2: #161b22;
+    --card-bg: #24292f;
+    --text-color: #f4f5f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-family: Garamond;
+}
+.asterik {
+    color: maroon;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 4px;
+}
+.room-space-checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.room-space-checkbox-group label {
+    display: flex;
+    align-items: center; /* Align checkbox and text */
+}
+
+body {
+    font-family: Garamond;
+    background-color: var(--bg-color-1);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: auto;
+}
+
+h6 {
+    display: inline;
+    font-size: 12px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.registration-container {
+    background-color: var(--bg-color-2);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+.top-header-form {
+    display: flex;
+    justify-items: center;
+    gap: 10px;
+    justify-content: end;
+}
+
+.top-header-form button {
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.form-slide {
+    display: none;
+    animation: slideIn 0.5s ease;
+    overflow: auto;
+}
+
+.form-slide.active {
+    display: block;
+    overflow: hidden;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--bg-color-1);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.slide {
+    position: relative;
+}
+
+.slide-number {
+    position: absolute;
+    right: 0px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+textarea:focus {
+    border: none;
+    outline: 1px solid var(--primary-color);
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Container for the progress bar */
+.progress-bar-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Background of the progress bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--bg-color-1);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Foreground of the progress bar */
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px 0 0 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Text overlay for the percentage */
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.conditional-field {
+    margin-top: 10px;
+}
+
+.multiple-select {
+    position: relative;
+}
+
+.multiple-select-dropdown {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: var(--card-bg);
+    border: 1px solid var(--primary-color);
+    z-index: 10;
+}
+
+.multiple-select-dropdown label {
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.multiple-select-dropdown label:hover {
+    background-color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.conditional-field {
+    margin-top: 15px;
+}
+
+.multiple-select {
+    position: relative;
+}
+
+.select-dropdown {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #24292f;
+    color: #f4f5f6;
+    border: 1px solid #087c7c;
+}
+
+.select-dropdown option {
+    padding: 10px;
+}
+
+.selected-countries,
+#selectedLanguages {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.selected-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #161b22;
+    color: #f4f5f6;
+    border: 1px solid #087c7c;
+    border-radius: 5px;
+}
+
+.selected-option .remove-btn {
+    background-color: #087c7c;
+    color: #f4f5f6;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.selected-option .remove-btn:hover {
+    background-color: #065a5a;
+}
+
+.radiobox-group {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+input[type="radio"] {
+    --s: 0.8em; /* control the size */
+    --c: #009688; /* the active color */
+
+    height: var(--s);
+    width: 0.8em;
+    aspect-ratio: 1;
+    border: calc(var(--s) / 8) solid #939393;
+    padding: calc(var(--s) / 8);
+    background: radial-gradient(farthest-side, var(--c) 94%, #0000) 50%/0 0
+        no-repeat content-box;
+    border-radius: 50%;
+    outline-offset: calc(var(--s) / 10);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    font-size: inherit;
+    transition: 0.3s;
+}
+
+input[type="radio"]:disabled {
+    background: linear-gradient(#939393 0 0) 50%/100% 20% no-repeat content-box;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+input[type="radio"]:checked {
+    border-color: var(--c);
+    background: radial-gradient(farthest-side, var(--c) 94%, #0000) 50%/100%
+        100% no-repeat;
+}
+
+/* Disabled state for the radio button */
+input[type="radio"]:disabled {
+    background: linear-gradient(#939393 0 0) 50%/100% 20% no-repeat content-box;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.attachment-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #24292f;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #f4f5f6;
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: #f4f5f6;
+}
+
+.upload-btn {
+    background-color: #087c7c;
+    color: #f4f5f6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+    background-color: #065a5a;
+}
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-container {
+    background-color: #161b22;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h3,
+h4 {
+    color: #009688;
+    margin-bottom: 20px;
+}
+
+.pillar-details {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #24292f;
+    border-radius: 8px;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-group input:not([type="radio"]):not([type="checkbox"]),
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #0d1117;
+    color: #f4f5f6;
+    font-size: 16px;
+}
+
+.required {
+    color: #ff4d4f;
+    margin-left: 4px;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Focus styles */
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #087c7c;
+}
+
+/* Hover styles */
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #087c7c;
+}
+
+.hr {
+    width: 100%;
+    height: 0.5px;
+    opacity: 0.5;
+    background-color: var(--text-color);
+    margin: 20px 0;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+@media print {
+    input[type="radio"] {
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
+        appearance: auto;
+        background: none;
+    }
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.plan-of-land-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.plan-of-land-table td {
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid #30363d;
+}
+
+.plan-of-land-table td.center {
+    text-align: center;
+}
+
+.plan-of-land-table input[type="file"] {
+    padding: 5px;
+}
+
+.plan-of-land-table .empty-row {
+    height: 20px;
+    background-color: #161b22;
+}
+
+.building-color-checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+.security-checkbox-group {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.security-checkbox-group label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.building-color-checkbox-group label {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Align to the left, or change to 'center' if you want to center horizontally */
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.building-color-custom {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #30363d;
+    background-color: #24292f;
+    color: #f4f5f6;
+}
+
+.building-color-custom.hidden {
+    display: none;
+}
+
+#selectedFacilities {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--card-bg);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.facility-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--bg-color-1);
+}
+
+.facility-item span {
+    margin-right: 10px;
+}
+
+.facility-item button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#selectedTribes {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--card-bg);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.tribe-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--bg-color-1);
+}
+
+.tribe-item span {
+    margin-right: 10px;
+}
+
+.tribe-item button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.table-container {
+    overflow-x: auto; /* Ensure responsiveness for smaller screens */
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #009688;
+    color: #fff;
+}
+
+.tribe-item button:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .registration-container {
+        padding: 15px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* modal  */
+
+/* Modal Background */
+
+/* Modal Background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 1;
+}
+
+.modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 3000;
+}
+
+/* Modal Box */
+.modal {
+    background: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-header {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-paragraph {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+.modal-warning {
+    margin-bottom: 20px;
+    color: #fd0909;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.modal-form input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.modal-form .radio-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-form .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.modal-form button {
+    padding: 10px;
+    font-size: 1rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-form button:hover {
+    background: #0056b3;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+/* currently updating card  */
+#currently_updating_info {
+    display: none;
+}
+
+.preview-form-info-card {
+    text-align: left;
+    background-color: #24292f;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.preview-form-info-card ul {
+    padding-left: 15px;
+    list-style: none;
+}
+
+.preview-form-info-card ul li {
+    margin-top: 10px;
+}
+
+

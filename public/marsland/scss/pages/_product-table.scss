@@ -1,0 +1,87 @@
+.product-details-card {
+    border: 1px solid var(--ot-secondary-border);
+    .product-details-card_header {
+        border-bottom: 1px solid var(--ot-secondary-border);
+        padding: 17px 20px;
+    }
+    .product-details-card_body {
+        padding: 30px;
+    }
+}
+.table-responsive {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.product-table.style5 {
+    thead {
+        tr {
+            border: 0;
+            border: 1px solid var(--ot-secondary-border);
+            th {
+                border: 0 !important;
+                padding: 19px 30px;
+                // background-color: #fcfdfd;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                vertical-align: middle;
+                border: 0;
+                padding: 14.5px 30px;
+                border-bottom: 1px dashed var(--ot-secondary-border) !important;
+            }
+        }
+    }
+}
+
+
+
+// Ratting
+.primary_label2 {
+	font-family: "Circular Std Book";
+	font-size: 14px;
+	font-weight: 500;
+	color: #2e2e2e;
+	display: block;
+	margin-bottom: 15px;
+	line-height: 1;
+}
+#full-stars-example-two .rating-group {
+	display: inline-flex;
+}
+#full-stars-example-two .rating__label {
+	cursor: pointer;
+	padding: 0 0.1em;
+	font-size: 2rem;
+}
+#full-stars-example-two .rating__input--none {
+	display: none;
+}
+#full-stars-example-two .rating__input--none {
+	display: none;
+}
+#full-stars-example-two .rating__icon--star {
+	color: orange;
+}
+
+#full-stars-example-two .rating__label {
+	cursor: pointer;
+	padding: 0 0.1em;
+	font-size: 2rem;
+}
+#full-stars-example-two .rating__input {
+	position: absolute !important;
+	left: -9999px !important;
+}
+
+#full-stars-example-two .rating__icon--star {
+    color: var(--ot-primary);
+}
+#full-stars-example-two .rating-group:hover .rating__label .rating__icon--star {
+    color: var(--ot-primary);
+}
+#full-stars-example-two .rating__input:checked ~ .rating__label .rating__icon--star {
+    color: #ddd;
+}

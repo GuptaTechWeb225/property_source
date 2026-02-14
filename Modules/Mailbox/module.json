@@ -1,0 +1,13 @@
+{
+    "name": "Mailbox",
+    "alias": "mailbox",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Mailbox\\Providers\\MailboxServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

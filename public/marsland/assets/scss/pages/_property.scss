@@ -1,0 +1,25 @@
+.badges {
+	position: absolute;
+    z-index: 1;
+	min-width: 44px;
+	height: 21px;
+
+	padding: 5px 5px ;
+
+	font-size: 12px;
+	font-weight: 700;
+	border-radius: 2px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	top: 20px;
+	left: 20px;
+    color: #fff;
+}
+
+.badge-bg-green{
+	background: var(--ot-primary);
+}
+.badge-bg-yellow{
+	background: #f27001;
+}

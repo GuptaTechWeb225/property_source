@@ -1,0 +1,13 @@
+{
+    "name": "Marsland",
+    "alias": "marsland",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Marsland\\Providers\\MarslandServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

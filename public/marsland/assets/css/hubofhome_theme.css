@@ -1,0 +1,43 @@
+:root{
+    --ot-primary:#c99d66;
+    --ot-secondary:#c99d66;
+    --ot-tertiary:#0A547A;
+    --ot-primary-btn:var(--ot-primary);
+    --ot-secondary-btn:var(--ot-tertiary);
+    --ot-primary-title: var(--ot-tertiary);
+    --ot-primary-rgb:201, 157,102, 100;
+    --ot-secondary-rgb:201, 157,102, 100;
+}
+.dark-mode {
+    --ot-primary:#c99d66;
+    --ot-primary-title: #0d7db7;
+    --ot-primary-btn:var(--ot-primary);
+}
+.primary-soft-btn{
+    color: #fff;
+    background-color:var(--ot-primary);
+}
+.badge-bg-yellow {
+    background:var(--ot-tertiary);
+}
+.header-sticky.sticky-bar {
+    background: #fff;
+}
+.dark-mode .header-sticky.sticky-bar {
+    background:#161b22 !important;
+}
+.footer-wrapper {
+    background: #24324a !important;
+}
+.footer-caption .title {
+    color: #fff;
+}
+.footer-caption .listing .list a {
+    color: #8a99b3;
+}
+.footer-bottom-area .footer-copy-right .pera {
+    color: #fff;
+}
+#contact-whatsApp{
+    display: none;
+}

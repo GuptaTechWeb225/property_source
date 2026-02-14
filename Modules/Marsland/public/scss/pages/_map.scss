@@ -1,0 +1,111 @@
+.single-map{
+    padding: 36px 20px;
+    @include transition(.3s);
+    border-radius: 8px;
+    background-color: #F9F9F9;
+    @media #{$xs}{
+        @include flex-wrap(wrap);
+    } 
+    .icon{
+        min-width: 78px;
+        height: 48px;
+        text-align: center;
+        max-width: 78px;
+        border-radius: 6px;
+        i {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            overflow: hidden;
+            background-size: cover;
+        }
+      }
+    .cat-caption{  
+
+        .title{
+            font-size: 20px;
+            text-transform: capitalize;
+            font-family: var(--Nunito);
+            @media #{$xs}{
+                font-size: 18px;
+            }
+        }
+        .pear{
+            font-size: 18px;
+            margin: 0;
+            line-height: 1.4;
+        }
+    }
+    .color-border{
+        position: relative;
+        &::before{
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -16px;
+            z-index: 999;
+            left: 0;
+        }
+    }
+}
+
+
+
+// map card color & background Make
+
+.map-color-one{
+    .color-border{
+        &::before{
+            background: red;
+        }
+    }
+}
+.map-color-two{
+    .color-border{
+        &::before{
+            background: #006A4E;
+        }
+    }
+}
+.map-color-three{
+    .color-border{
+        &::before{
+            background: #FF0000;
+        }
+    }
+}
+.map-color-four{
+    .color-border{
+        &::before{
+            background: #3F51B5;
+        }
+    }
+}
+
+// End-fo color make
+
+// Child wise color call
+.map-area{
+    .col-xl-4:nth-child(1) .single-map{
+        @extend .map-color-one;
+    }
+    .col-xl-4:nth-child(2) .single-map{
+        @extend .map-color-two;
+    }
+    .col-xl-4:nth-child(3) .single-map{
+        @extend .map-color-three;
+    }
+    .col-xl-4:nth-child(4) .single-map{
+        @extend .map-color-four;
+    }
+}
+
+.border-bottom-style{
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.border-style{
+    border: 1px solid #E7E7E7;
+}
+

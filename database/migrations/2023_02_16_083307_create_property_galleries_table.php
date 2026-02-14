@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('property_galleries', function (Blueprint $table) {
+            $table->id();
+            $table->enum('type', ['gallery', 'floor_plan'])->default('gallery');
+            $table->string('title')->nullable()->default('property gallery title');
+            $table->foreignId('property_id')->constrained('properties')->cascadeOnDelete();
+            $table->foreignId('image_id')->constrained('images')->cascadeOnDelete();
+            $table->tinyInteger('status')->default(App\Enums\Status::ACTIVE);
+            $table->tinyInteger('is_default')->default(0);
+            $table->integer('serial')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('property_galleries');
+    }
+};

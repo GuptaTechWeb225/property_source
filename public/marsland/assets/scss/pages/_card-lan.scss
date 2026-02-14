@@ -1,0 +1,100 @@
+
+.land-card{
+	.lan-single{
+		padding: 42px 50px 65px 50px;
+		background-color: #070058;
+	}
+	.lan-single .title {
+		font-size: 26px;
+		font-weight: 700;
+		color: #fff;
+		line-height: 1.29;
+		margin-bottom: 15px;
+	}
+	.lan-single a {
+		font-size: 14px;
+		font-weight: 700;
+		color: #fff;
+		text-transform: uppercase;
+	}
+}
+
+.lan-single-bg-1 {
+	background-image: url("../../assets/images/gallery/deal_1.jpg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.lan-single-bg-2 {
+	background-image: url("../../assets/images/gallery/deal_2.jpg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.lan-single-bg-3 {
+	background-image: url("../../assets/images/gallery/deal_3.jpg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media (max-width: 767.98px) {
+	.land-card .lan-single .title {
+	  font-size: 25px;
+	}
+}
+
+
+//  Card two 
+
+.lan-single-card-2 {
+	padding: 38px 30px;
+	.lan-caption {
+		h4 {
+			margin-bottom: 0;
+			a {
+				font-size: 20px;
+				font-weight: 700;
+				color: #fff;
+				display: block;
+				text-transform: capitalize;
+			}
+		}
+		p {
+			font-size: 14px;
+			font-weight: 500;
+			color: #fff;
+			margin: 4px 0 20px 0;
+		}
+		.card-link {
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			text-transform: capitalize;
+			border-bottom: 1px solid #fff;
+			display: inherit;
+		}
+	}
+
+
+	
+}
+
+.single-card-2-bg1 {
+	background-image: url("../../assets/images/gallery/1.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.single-card-2-bg2 {
+	background-image: url("../../assets/images/gallery/2.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.single-card-2-bg3 {
+	background-image: url("../../assets/images/gallery/3.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

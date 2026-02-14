@@ -1,0 +1,271 @@
+.menu_logo img, .logo_img img {
+    max-height: 65px !important;
+}
+
+.auth-container .form-wrapper .form-logo img {
+    max-width: 154px !important;
+    height: auto !important;
+}
+.disabled_link {
+    pointer-events: none; /* Disable click events */
+    opacity: 0.6; /* Optionally reduce opacity to visually indicate it's disabled */
+    /* Add any other styles to visually indicate the disabled state */
+}
+.btn-theme-bg{
+    background: #087c7c;
+    border: 1px solid #087c7c;
+}
+
+.theme-bg{
+    background: #087c7c;
+}
+
+.btn-theme-bg:hover {
+    color: #fff;
+    border-color: #f99417;
+    background: #f99417;
+}
+.text-theme-color{
+    color: #087c7c;
+}
+
+header.o_land_header .header_area .main_menu {
+    margin-left: 0;
+}
+
+header.o_land_header .header_area .main_menu ul li a {
+    margin: 0px 14px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+header.o_land_header .header_area .header_top_area{
+    padding: 10px 0px;
+}
+
+.home_banner .banner_single .banner__text h3 {
+    color: #fff;
+}
+.menu_logo img, .logo_img img {
+    max-height: 80px !important;
+}
+
+
+.property_search_wrapper {
+    display: flex;
+    border: 1px solid #f1ece8;
+    border-radius: 50px;
+    padding: 0;
+    min-height: 60px;
+    grid-gap: 16px;
+    align-items: center;
+}
+.property_search_wrapper .property_search_left,
+.property_search_wrapper .property_search_right{
+    max-width: 230px;
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.property_search_wrapper .property_search_middle {
+    border-right: 1px solid #f1ece8;
+    border-left: 1px solid #f1ece8;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    min-height: 60px;
+}
+.property_search_wrapper .property_search_middle input{
+    border : 0 ;
+    font-size: 18px;
+}
+.property_search_wrapper .property_search_middle input::placeholder{
+    font-size: 18px;
+}
+
+.property_search_wrapper .property_search_right {
+    display: flex;
+    grid-gap: 12px;
+    max-width: 300px;
+}
+.property_search_wrapper .property_search_right .o_land_primary_btn{
+    border-radius: 50px;
+    padding: 21.5px 24px;
+}
+.property_search_wrapper .property_search_right .o_land_select2{
+    border: 0 !important;
+}
+.property_search_wrapper .property_search_right .o_land_select2 .current {
+    font-size: 18px;
+}
+.property_search_box {
+    padding: 10px;
+    box-shadow: 0 0px 4px rgb(0 0 0 / 25%);
+    border-radius: 50px;
+    position: relative;
+    z-index: 12;
+    background: #fff;
+    margin-top: -43px;
+}
+.home_banner .owl-dots {
+    bottom: 50px;
+}
+
+/*landlorad_cta*/
+.landlorad_cta{
+    background: #c99d66;
+}
+.landlorad_cta a{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    padding: 21px 0;
+}
+.landlorad_cta .row .col-md-4:not(:last-child){
+    border-right: 1px solid rgba(255,255,255,.3)
+}
+.whatsapp-chat {
+    position: fixed;
+    bottom: 0;
+    margin: 8px;
+}
+.home_banner .banner_single .description .text p span {
+    color: #fff !important;
+    font-size: 14px !important;
+    font-family: "Circular Std Book" !important;
+}
+.home_banner .banner_single .description .text h2 span {
+    line-height: 3 !important;
+    color: #087c7c !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    font-family: "Circular Std Book" !important;
+
+
+footer.home_three_footer {
+    background: #24324a;
+}
+
+footer.home_three_footer .footer-ul {
+    color: #8a99b3;
+}
+footer.home_three_footer .footer-ul li{
+    margin-bottom: 10px;
+}
+footer.home_three_footer .footer-ul li span.icon{
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 2px;
+    color: #fff;
+    line-height: 25px;
+    margin-right: 10px;
+    background: #c99d66 !important;
+    display: inline-block;
+}
+.banner_single.home_Banner_bg_1 .description.rounded-3{
+    border-radius: .6rem !important;
+}
+.subscriber-box {
+    background: #4b5d7c;
+    border-radius: 5px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 0px;
+    padding-left: 15px;
+    padding-right: 4px;
+    height: 67px;
+}
+.subscriber-box h3{
+    white-space: nowrap;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+    font-size: 22px;
+}
+form.subscription.relative {
+    width: 100%;
+    position: relative;
+}
+form.subscription.relative button {
+    position: absolute;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    background: #c99d66;
+    width: 100px;
+    height: 54px;
+    top: 3px;
+    right: 5px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 35px;
+    transition: all linear .3s;
+    text-align: center;
+}
+form.subscription.relative input.form-control
+{
+    height: 60px;
+    border-radius: 0;
+    background: #24324a;
+    border: 0;
+    color: #fff;
+}
+
+
+.o_land_deal_area .deal_wizard{
+    height: 270px;
+}
+
+.contact_map #contact-map {
+    height: 500px !important;
+}
+footer.home_three_footer .main_footer_wrap .footer_widget .footer_links li a{
+    color: #8a99b3;
+}
+
+
+
+footer.home_three_footer .main_footer_wrap .social__Links a {
+    color: #9dacc5;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #9dacc5;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: all linear .3s;
+    display: inline-block;
+}
+footer.home_three_footer .main_footer_wrap .social__Links a i{
+    color: #fff;
+}
+footer.home_three_footer .main_footer_wrap .social__Links a.twitter{
+    color: #fff;
+    background: #00acee;
+    border: 1px #00acee;
+}
+footer.home_three_footer .main_footer_wrap .social__Links a.linkedin{
+    color: #fff;
+    background: #0A66C2;
+    border: 1px #0A66C2;
+}
+
+footer.home_three_footer .main_footer_wrap .social__Links a.facebook{
+    color: #fff;
+    background: #3b5998;
+    border: 1px #3b5998;
+}
+
+footer.home_three_footer .main_footer_wrap .social__Links a.instagram{
+    color: #fff;
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    border: 1px #3f729b;
+}

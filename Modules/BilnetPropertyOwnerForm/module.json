@@ -1,0 +1,13 @@
+{
+    "name": "BilnetPropertyOwnerForm",
+    "alias": "bilnetpropertyownerform",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\BilnetPropertyOwnerForm\\Providers\\BilnetPropertyOwnerFormServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

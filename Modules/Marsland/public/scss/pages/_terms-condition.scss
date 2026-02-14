@@ -1,0 +1,49 @@
+
+.single-terms{
+    .title{
+        font-size: 22px;
+        margin-bottom: 18px;
+        text-transform: capitalize;
+    }
+    .pera{
+        font-size: 14px;
+        text-transform: capitalize;
+        line-height: 1.6;
+    }
+}
+
+.single-policy{
+    .title{
+        font-size: 22px;
+        margin-bottom: 18px;
+        text-transform: capitalize;
+    }
+    .pera{
+        font-size: 14px;
+        text-transform: capitalize;
+        line-height: 1.6;
+    }
+}
+
+
+.filter-faq{
+    min-width: 200px;
+    .select2-container--default .select2-selection--single {
+        border: 1px solid var(--ot-primary) !important;
+    }
+    .select2-selection {
+        border-color: var(--ot-primary-border) !important;
+        border-radius: 4px !important;
+        margin-bottom: 0px;
+        min-height: 45px !important;
+        padding: 9px 14px 15px 14px;
+        color: var(--ot-primary) !important;
+        text-transform: capitalize;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: var(--ot-primary) !important;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        border-color: var(--ot-primary) transparent transparent;
+    }
+}

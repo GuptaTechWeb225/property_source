@@ -1,0 +1,36 @@
+
+.single-items-card {
+	background: var(--white);
+	box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 36px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+    
+    .items-icon {
+        margin-bottom: 21px;
+        img {
+            width: 100%;
+        }
+    }
+    .items-body{
+        padding: 0px 24px 50px 24px;
+        .title{
+            font-weight: 600;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 0.01em;
+            text-transform: capitalize;
+            color: var(--ot-primary-title);
+            margin-bottom: 10px;
+        }
+        .pera{
+            font-weight: 500;
+            font-size: 16px;
+            text-align: center;
+            letter-spacing: 0.01em;
+            text-transform: capitalize;
+        }
+    }
+}
+

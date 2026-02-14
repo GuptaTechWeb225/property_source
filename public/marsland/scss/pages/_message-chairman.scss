@@ -1,0 +1,104 @@
+.chairman-profile-card {
+    text-align: center;
+    background: var(--white);
+    .chairman-image {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        min-height: 200px;
+        width: 100%;
+        overflow: hidden;
+        img{
+          width: 100%;
+        }
+    }
+    .chairman-name {
+        text-transform: capitalize;
+        color: var(--ot-primary-title);
+        font-size: 24px;
+        margin-bottom: 3px;
+    }
+    .chairman-position {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: var(--ot-primary-paragraph);
+        margin-bottom: 6px;
+    }
+    .chairman-info {
+        p {
+            font-size: 14px;
+            color: var(--ot-primary-paragraph);
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+  
+        }
+    }
+  }
+
+
+.chairman-message{
+    background: var(--white);
+    padding: 63px 59px;
+    border-radius: 8px;
+    position: relative;
+    @media #{$xs}{
+        padding: 11px 16px 0 18px;
+    }
+    .chairman-img {
+        border: 3px solid var(--white);
+        border-radius: 50%;
+        max-width: 70px;
+        height: 70px;
+        overflow: hidden;
+        min-width: 70px;
+        box-shadow: 0px 5.33448px 26.6724px rgba(0, 0, 0, 0.03);
+    }
+    .chairman-text {
+        .title{
+            color: var(--ot-primary-title);
+            font-weight: 500;
+            line-height: 1.5;
+            font-size: 22px;
+        }
+        .designation {
+            color: #646D77;
+            font-size: 14px;
+            @media #{$xs}{
+                font-size: 12px;
+            }
+        }
+    }
+    .pera{
+        font-size: 18px;
+        color: var(--ot-primary-paragraph);
+        line-height: 1.6;
+        &:last-child{
+            margin: 0;
+        }
+    }
+
+    
+    .double-quotes1 {
+        font-size: 81px;
+        border-radius: 50%;
+        color: #E3E3E3;
+        display: block;
+        position: absolute;
+        left: 9%;
+        top: -40px;
+        line-height: 1;
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    .double-quotes2{
+        @extend .double-quotes1;
+        right: 9%;
+        bottom: -54px;
+        top: auto;
+        left: auto;
+    }
+}

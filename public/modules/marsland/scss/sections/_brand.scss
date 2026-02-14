@@ -1,0 +1,16 @@
+
+.brand-box{
+    background: var(--white);
+    border-radius: 13.3362px;
+    padding: 18px 22px;
+    text-align: center;
+    min-height: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5.33448px 26.6724px rgba(0, 0, 0, 0.03);
+    img{
+        max-width: 80%;
+        
+    }
+}

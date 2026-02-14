@@ -1,0 +1,136 @@
+
+// breadcrumb Overly
+.breadcrumb-overly {
+    position: relative;
+    z-index: 0;
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: rgba(0, 0, 0,.8);
+        // @extend %overlay1;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-repeat: no-repeat;
+    }
+}
+
+
+.ot-breadcrumb-inner{
+    padding: 51px 0 64px 0;
+    .breadcrumb-text{
+        @media #{$xs-to-md-max} {
+            order: 2;
+        }
+        .title{
+            font-size: 35px;
+            margin-bottom: 5px;
+            text-transform: capitalize;
+            color: var(--ot-primary);
+            @media #{$xs} {
+                font-size: 30px; 
+                margin-bottom: 15px;
+            }
+        }
+        .breadcrumb-links{
+            grid-gap: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            
+            a{
+                font-size: 24px;
+                color: var(--ot-primary-title);
+                display: flex;
+                align-items: center;
+                grid-gap: 12px;
+                text-transform: capitalize;
+                &.breadcrumb-link{
+                    &:hover{
+                        color: var(--ot-primary);
+                    }
+                }
+                
+                &:not(:first-child){
+                    &::before{
+                        content: '';
+                        width: 4px;
+                        height: 4px;
+                        background: var(--ot-primary-title);    
+                        border-radius: 50%;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .breadcrumb-shape{
+        @media #{$xs-to-md-max} {
+            order: 1;
+        }
+    }
+}
+
+
+.breadcrumb-gradient{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e7e7ff+1,ffffff+100,ffffff+100 */
+    background: #e7e7ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e7e7ff 1%, #ffffff 100%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #e7e7ff 1%,#ffffff 100%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #e7e7ff 1%,#ffffff 100%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7e7ff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+.line-dro{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    .line-left{
+        border-bottom: 1px solid var(--ot-primary); 
+        width: 120px;
+        display: block;
+     }
+
+    .line-right{ 
+        border-bottom: 1px solid var(--ot-primary); 
+        width: 120px;
+        display: block;
+    }
+    .line-circle{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--ot-primary);
+        display: block;
+    }
+}
+
+.diamond-square-shape{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        right: 100%;
+        width: 8px;
+        height: 8px;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        background-color: var(--ot-primary);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.diamond-square-shape2{
+    @extend .diamond-square-shape;
+    &::before{
+        left: 100%;
+    }
+}

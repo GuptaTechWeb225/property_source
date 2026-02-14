@@ -1,0 +1,250 @@
+// course-details-tabs 
+.tab-style2{
+    grid-gap: 0;
+    @media #{$xs-to-sm-max} {
+        grid-gap: 20px;
+    }
+    .nav-item {
+        &:last-child .nav-link{
+            margin-bottom: 0;
+        }
+        .nav-link {
+            @include transition(.4s);
+            border: 1px solid var(--ot-secondary-border);
+            padding: 12px 14px;
+            margin-bottom: 14px;
+            border-radius: 8px;
+            background: none;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+           
+            @media #{$xs-to-sm-max} {
+                margin-right: 5px;
+            }
+            .icon {
+                font-size: 30px;
+                min-width: 42px;
+                max-width: 42px;
+                height: 42px;
+                text-align: center;
+                line-height: 42px;
+                background: var(--section-bg-two);
+                border-radius: 50%;
+                color: var(--ot-primary);
+            }
+            &.active{
+                background: var(--ot-primary);
+                // background: #E1E1E1;
+                .icon {
+                    i{
+
+                        color: var(--ot-primary);
+                    }
+                }
+                span{
+                    color: var(--white);
+                }
+               
+            }
+
+            &::before {
+                height: unset;
+            }
+            span {
+                font-weight: 500;
+                font-size: 18px;
+                color: var(--ot-primary-paragraph);
+                text-transform: capitalize;
+                @media #{$xs-to-sm-max} {
+                    font-size: 14px;
+                }
+        }
+        }
+    }
+}
+
+.cart-gradient-bg{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7db9e8+0,000842+0,000f7b+100 */
+    background: rgb(125,185,232); /* Old browsers */
+    background: -moz-linear-gradient(45deg,  rgba(125,185,232,1) 0%, rgba(0,8,66,1) 0%, rgba(0,15,123,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  rgba(125,185,232,1) 0%,rgba(0,8,66,1) 0%,rgba(0,15,123,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  rgba(125,185,232,1) 0%,rgba(0,8,66,1) 0%,rgba(0,15,123,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#000f7b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-color: red;
+}
+
+.project-cart {
+    border-radius:6px;
+
+    background-image:url(../images/gallery/card-bg.png);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:100% 100%;
+    position: relative;
+    
+    &:before{
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0px;
+        bottom: 0;
+        z-index: 0;
+        @extend .cart-gradient-bg;
+
+        z-index: 1;
+        opacity: 0.8;
+    }
+    .project-cart-caption {
+        padding: 61px 40px 56px 37px;
+        position: relative;
+        z-index: 1;
+        .title {
+            color: #fff;
+            font-size:28px;
+            margin-bottom:19px;
+            line-height:1.4
+        }
+        .pera {
+            color:#fff;
+            font-size:18px;
+            font-weight:400;
+            margin-bottom:35px;
+            line-height:1.5
+        }
+        .btn-primary-fill {
+            color: var(--ot-primary);
+            padding: 15px 20px;
+            background: #fff;
+            font-weight: 500;
+       }
+    }
+}
+
+
+// Style One accordion
+.accordion-style-one{
+    .accordion-item {
+        border: 0;
+        margin-bottom: 20px;
+        border: 1px solid var(--ot-primary-border);
+        border-radius: 6px;
+
+    }
+    .accordion:last-child {
+        margin-bottom: 0px;
+    }
+    .accordion-header {
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        border: 0;
+        .accordion-button{
+            text-align: left;
+            color: var(--ot-primary-title);
+            background: none;
+            border: 0;
+            padding: 16px 61px 16px 16px;
+            font-size: 16px;
+            font-weight:500;
+            border-bottom: 0;
+            display: block;
+            text-decoration: none;
+            border-radius: 0;
+            @media #{$xs}{
+                padding: 17px 6px 21px 13px;
+            }
+            &::after {
+                position: absolute;
+                top: 13px;
+                font-size: 18px;
+                color: var(--ot-primary-title);
+                right: 24px;
+                content: "\f1af";
+                font-family: var(--remix-icon);
+                background-image: none;
+                outline: 0;
+                transform: rotate(0deg);
+            }
+            &.collapsed {
+                border: 0;
+                &::after {
+                    content: "\ea13";
+                }
+            }
+            &:focus{
+                box-shadow:none !important;
+                border: 0;
+            }
+            &:not(.collapsed) {
+                box-shadow: none;
+                }
+        }
+    }
+    .accordion-collapse{
+        border: 0;
+        &.show{
+            background:var(--white);
+        }
+        .accordion-body {
+            @include transition(.3s);
+            background: var(--white);
+            padding: 10px 10px 20px 24px;
+            p{
+                font-size: 14px;
+            }
+           
+        }
+    }
+}
+
+
+.technology{
+    .icon {
+        min-width: 80px;
+        max-width: 80px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        &:nth-child(1){
+            background: #F5634A;
+        }
+        &:nth-child(2){
+            background: #5732AB;
+        }
+        &:nth-child(3){
+            background: var(--white);
+        }
+        &:nth-child(4){
+            background: var(--white);
+        }
+        &:nth-child(5){
+            background: var(--white);
+        }
+        &:nth-child(6){
+            background: var(--white);
+        }
+        &:nth-child(7){
+            background: var(--white);
+        }
+    }
+}
+
+.work-process{
+    .icon {
+        min-width: 80px;
+        max-width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 30px;
+        text-align: center;
+        border-radius: 50%;
+        background: transparent;
+        border: 1px solid var(--ot-primary-title);
+    }
+}

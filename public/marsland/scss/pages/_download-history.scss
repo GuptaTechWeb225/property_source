@@ -1,0 +1,205 @@
+.single-download{
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    border-bottom: 1px solid var(--ot-secondary-border);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    @media #{$xs-to-sm-max}{
+        flex-wrap: wrap;
+    }
+
+    .product-info {
+        display: flex;
+        justify-content: space-between;
+        @media #{$xs}{
+            flex-wrap: wrap;
+        }
+        @media #{$lg}{
+            flex-wrap: wrap;
+        }
+        .contents{
+            .price{
+                justify-content: center;
+            }
+            .ratings{
+                justify-content: center;
+            }
+            .others-info{
+                text-align: center;
+            }
+            .updated-date{
+                display: block !important;
+            }
+        }
+    }
+    .product-img{
+        border-radius: 8px;
+        .product-badge{
+            left: 10px;
+            top: 10px;
+            overflow: hidden;
+        }
+        img{
+            @include transition(.4s);
+            transform: scale(1);
+            width: 100%;
+        }
+        .quick-action-buttons{
+            z-index: 11;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-30%);
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+            a{
+                background: rgba(var(--ot-primary-rgb),.5);
+                border-radius: 6px;
+                width: 26px;
+                height: 26px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                color: #fff;
+                transition: .3s;
+                &:hover{
+                    background: var(--ot-primary);
+                }
+            }
+        }
+    }
+
+    .product-info-title {
+        width: calc(54%);
+        margin-bottom: 0;
+        padding-right: 20px;
+        @media #{$xs}{
+            width: 100%;
+        }
+        @media #{$lg}{
+            width: 100%;
+        }
+    }
+    .cart-btn{
+        @include transition(.4s);
+        border: 1px solid var(--ot-primary-border);
+        padding: 7px 9px;
+        font-size: 18px;
+        border-radius: 0px;
+        background: none;
+        color: var(--ot-primary-paragraph);
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        &:hover{
+            color: var(--white);
+            background: var(--ot-primary);
+            border: 1px solid transparent;
+        }
+    }
+    .btn-primary-outline{ 
+        padding: 7px 11px;
+        font-size: 13px;
+        border-radius: 0px;
+    }
+
+}
+
+.feedback-btn{
+    cursor: pointer;
+    @include transition(.4s);
+    border: 1px solid var(--ot-primary-border);
+    padding: 7px 20px;
+    font-size: 18px;
+    border-radius: 0px;
+    background: none;
+    color: var(--ot-primary-paragraph);
+    line-height: 1;
+    display: flex;
+    align-items: center;
+
+    height: 49px;
+    border-radius: 4px;
+    &:hover{
+        color: var(--white);
+        background: var(--ot-primary);
+        border: 1px solid transparent;
+    }
+}
+
+
+.notified-check {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  label {
+      display: flex;
+      align-items: center;
+      padding-left: 25px;
+      position: relative;
+      cursor: pointer;
+      small {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: var(--ot-primary-title);
+          margin-left: 8px;
+      }
+  }
+  .ot-checkbox {
+      margin-right: 10px;
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .ot-checkmark {
+          background-color: var(--ot-primary);
+          border-color: var(--ot-primary);
+          &::after {
+            display: block;
+          }
+      }
+  }
+  .ot-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border: 1.5px solid #b1b5c4;
+    margin-right: 12px;
+    border-radius: 50%;
+    font-size: 12px;
+    &::after {
+      content: "\eb7b";
+      font-family: var(--remix-icon);
+      position: absolute;
+      left: 0;
+      top: -1px;
+      color: #fff;
+      display: none;
+      right: 0;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  .forget-section {
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: right;
+        letter-spacing: 0.5px;
+        color: var(--ot-tertiary);
+      }
+  }
+}

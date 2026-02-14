@@ -1,0 +1,13 @@
+/public/storage
+/public/chatgpt
+/public/express
+/public/py
+/public/uploads
+/storage/*.key
+/vendor
+/storage/logs
+/storage/app
+.env
+.phpunit.result.cache
+Homestead.json
+.idea
